@@ -48,6 +48,8 @@ var unityWebView =
     },
 
     sendMessage: function (name, message) {
+        console.log('message ',message)
+        console.log('name ',name)
         unityInstance.SendMessage(name, "CallFromJS", message);
     },
 
