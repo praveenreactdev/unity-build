@@ -82,7 +82,7 @@ var unityWebView =
     evaluateJS: function (name, js) {
         $iframe = this.iframe(name);
         if ($iframe.attr('loaded') === 'true') {
-            $iframe[0].contentWindow.eval(js);
+           // $iframe[0].contentWindow.eval(js);
         } else {
             $iframe.on('load', function(){
                 $(this)[0].contentWindow.eval(js);
