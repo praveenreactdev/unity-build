@@ -42,7 +42,7 @@ var unityWebView =
                     }
                     return true;
                 });
-
+                console.log(location.href);
                 unityInstance.SendMessage(name, "CallOnLoaded", location.href);
             });
     },
