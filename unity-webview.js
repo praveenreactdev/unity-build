@@ -81,6 +81,7 @@ var unityWebView =
 
     evaluateJS: function (name, js) {
         $iframe = this.iframe(name);
+        console.log(js)
         if ($iframe.attr('loaded') === 'true') {
            // $iframe[0].contentWindow.eval(js);
         } else {
