@@ -28,6 +28,7 @@ var unityWebView =
                         w.location.replace(href);
                     }
                 });
+                console.log('name',name)
                document.getElementById('webview_'+name).contentWindow.postMessage('iframe-access','https://broadcast.techfully.io/')
 
                 contents.find('form').submit(function () {
