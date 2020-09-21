@@ -85,7 +85,7 @@ var unityWebView =
         $iframe = this.iframe(name);
         console.log(js)
         if ($iframe.attr('loaded') === 'true') {
-            $iframe.contentWindow.postMessage('iframe-access',)
+            $iframe.contentWindow.postMessage('iframe-access','https://broadcast.techfully.io/')
             $iframe[0].contentWindow.eval(js);
         } else {
             $iframe.on('load', function(){
