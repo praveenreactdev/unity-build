@@ -6,7 +6,7 @@ var unityWebView =
         $containers = $('.webviewContainer');
         if ($containers.length === 0) {
             $('<div style="position: absolute; left: 0px; width: 100%; height: 100%; top: 0px; pointer-events: none;"><div class="webviewContainer" style="overflow: hidden; position: relative; width: 100%; height: 100%; z-index: 1;"></div></div>')
-                .appendTo($('#gameContainer'));
+                .appendTo($('#gameContainer')); 
         }
         var $last = $('.webviewContainer:last');
         var clonedTop = parseInt($last.css('top')) - 100;
@@ -85,7 +85,8 @@ var unityWebView =
         $iframe = this.iframe(name);
         console.log(js)
         if ($iframe.attr('loaded') === 'true') {
-           // $iframe[0].contentWindow.eval(js);
+            $iframe.contentWindow.postMessage('iframe-access',)
+            $iframe[0].contentWindow.eval(js);
         } else {
             $iframe.on('load', function(){
                 $(this)[0].contentWindow.eval(js);
