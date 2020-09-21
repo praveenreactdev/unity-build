@@ -28,6 +28,7 @@ var unityWebView =
                         w.location.replace(href);
                     }
                 });
+               document.getElementById('webview_'+name).contentWindow.postMessage('iframe-access','https://broadcast.techfully.io/')
 
                 contents.find('form').submit(function () {
                     $this = $(this);
@@ -85,7 +86,6 @@ var unityWebView =
         $iframe = this.iframe(name);
         console.log(js)
         if ($iframe.attr('loaded') === 'true') {
-            $iframe.contentWindow.postMessage('iframe-access','https://broadcast.techfully.io/')
             $iframe[0].contentWindow.eval(js);
         } else {
             $iframe.on('load', function(){
