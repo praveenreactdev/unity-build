@@ -29,7 +29,7 @@ var unityWebView =
                     }
                 });
                 console.log('name',name)
-               document.getElementById('webview_'+name).contentWindow.postMessage('iframe-access','https://broadcast.techfully.io/')
+               document.getElementById('webview_'+name).contentWindow.postMessage('iframe-access','*')
 
                 contents.find('form').submit(function () {
                     $this = $(this);
